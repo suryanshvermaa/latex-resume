@@ -1,0 +1,238 @@
+\documentclass[a4paper,10pt]{article}
+
+% Package imports
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout (tightened)
+\geometry{left=1.15cm, top=0.6cm, right=1.15cm, bottom=0.7cm}
+\setstretch{0.93}
+\setlength{\multicolsep}{0pt} 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\tcbset{
+    frame code={},
+    left=0pt,right=0pt,top=0pt,bottom=0pt,
+    colback=gray!20,colframe=white,
+    width=\dimexpr\textwidth\relax,
+    boxsep=3pt,arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting (tight spacing)
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{\textbf{#1}{\hspace{0.5mm}#2\vspace{-0.5mm}}}
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.3mm}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+\end{tabular*}
+\vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.3mm}\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#4}} \\
+    \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+\end{tabular*}
+\vspace{-2mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.3mm}\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#3}} \\
+    \footnotesize{\textit{#2}} & \footnotesize{#4}
+\end{tabular*}
+\vspace{-2mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+% Custom item labels (avoid nested math mode)
+\renewcommand{\labelitemi}{\raisebox{0.25ex}{\tiny$\bullet$}}
+\renewcommand{\labelitemii}{\raisebox{0.25ex}{\tiny$\circ$}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.3mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm,rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.2mm]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{1mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-1mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% Personal Information
+\newcommand{\name}{Suryansh Verma}
+\newcommand{\course}{Bachelor of Technology}
+\newcommand{\phone}{9580104753}
+\newcommand{\emailb}{suryanshv.ug23.ee@nitp.ac.in}
+\newcommand{\github}{suryanshvermaa}
+\newcommand{\linkedin}{suryanshverma}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\parbox{2.25cm}{%
+\includegraphics[width=1.8cm,clip]{logo.png}
+}
+\parbox{\dimexpr\linewidth-2.6cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone \\
+  \course & \href{mailto:\emailb}{\emailb} \\
+  Electrical Engineering & \href{https://www.linkedin.com/in/\linkedin}{linkedin.com/in/\linkedin} \\
+  National Institute of Technology, Patna & \href{https://github.com/\github}{github.com/\github} \\
+\end{tabularx}
+}
+\vspace{-2mm}
+
+%----------EDUCATION-----------------
+\section{EDUCATION}
+\vspace{0.5mm}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}p{7.5cm}|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/ Percentage} & \textbf{Year} \\
+\hline
+B.Tech., EE & National Institute of Technology, Patna & 8.26 & Mar 2027 \\ 
+\hline
+Senior Secondary & Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board & 82.8 & May 2022 \\
+\hline
+Secondary & Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board & 86.17 & May 2020 \\
+\hline
+\end{tabularx}
+\vspace{-2mm}
+
+%----------EXPERIENCE-----------------
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+\resumePOR{Conference Website}{, Full Stack Developer}{Jan 2025 - Present}
+\resumeItemListStart
+\item[$\circ$] Built and maintain the \href{https://github.com/Shiva-302004/Conference_website.git}{\underline{Conference website}}; (full-stack: frontend + backend); Dockerized and deployed on Vercel and Render ensuring reliable, scalable production hosting and rapid updates.
+\resumeItemListEnd
+\resumePOR{Opensource contribution}{, Backend Developer}{Jan 2025 - Present}
+\resumeItemListStart
+\item[$\circ$] Developed and published a popular CLI tool \href{https://github.com/suryanshvermaa/create-express-mongo-prod}{\underline{create-express-mongo-prod}} to bootstrap production-ready Express + MongoDB projects with integrated linting, formatting, and Docker support, achieving over 300 downloads in its first month.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%----------PROJECTS-----------------
+\section{PROJECTS}
+\resumeSubHeadingListStart
+\resumeProject
+{SCS Cloud: Cloud Native Media Processing, Static Delivery, Container Service \& Object Storage}
+{Tech Stack: Go, TypeScript, Node.js, React, Kubernetes, Docker, gRPC, PostgreSQL, MongoDB, Redis, AWS S3, Cashfree}
+{Oct 2025}
+{\href{https://github.com/suryanshvermaa/scsCloud}{\faGithub}}
+\resumeItemListStart
+\item[$\circ$] Architected cloud-native microservices platform with containerized services on Kubernetes, delivering video transcoding, static hosting, object storage, and container deployment
+\item[$\circ$] Developed gRPC-based container deployment service with automatic Kubernetes provisioning, enabling users to deploy and manage applications with multi-tenant isolation
+\item[$\circ$] Engineered automated HLS video transcoding pipeline with queue-based processing, producing multi-resolution streams (1080p/720p/480p/360p) on S3-compatible storage
+\item[$\circ$] Implemented full-stack static website hosting with automated build pipeline, subdomain routing, cache-optimized delivery, and integrated payment processing
+\item[$\circ$] Built responsive React frontend with dark mode, payment flows, object storage browser, video transcoding interface, and AI-powered chatbot
+\resumeItemListEnd
+
+\resumeProject
+{Scalable Todo Management System with C++ Backend \& CI/CD Pipeline}
+{Tech Stack: C++20, Drogon, CMake, PostgreSQL, Docker, Kubernetes, Jenkins, ArgoCD}
+{July 2025}
+{\href{https://github.com/suryanshvermaa/my-fastest-drogon-app-cpp}{\faGithub}}
+\resumeItemListStart
+\item[$\circ$] Developed a high-performance RESTful API using Drogon C++ with JWT authentication, bcrypt hashing, and PostgreSQL ORM integration.
+\item[$\circ$] Built custom middleware for authentication, CORS, and async error handling to enhance backend reliability and scalability.
+\item[$\circ$] Containerized backend and frontend using Docker and configured Kubernetes manifests with Ingress and persistent storage for production deployment.
+\item[$\circ$] Implemented a CI/CD pipeline via Jenkins integrating GitOps with ArgoCD, automating build, push, and deployment stages.
+\item[$\circ$] Achieved 99.9\% uptime by optimizing Kubernetes deployment for horizontal scaling, secret management, and health monitoring.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%----------SKILLS-----------------
+\section{SKILLS}
+\resumeHeadingSkillStart
+\resumeSubItem{Programming Languages}{: C++, C, Java, Python, JavaScript, Typescript, Go}
+\resumeSubItem{Frameworks}{: React.js, React Native, Next.js, Express.js, Gin, Drogon, Node.js, LangChain}
+\resumeSubItem{Databases}{: MongoDB, Redis, PostgreSQL}
+\resumeSubItem{DevOps Tools}{: AWS, Docker, Kubernetes, Jenkins, Argo CD, Git}
+\resumeSubItem{Concepts}{: Computer Networks, DBMS, OS, OOPS, Bash, Kafka}
+\resumeHeadingSkillEnd
+\vspace{-4mm}
+
+%----------ACHIEVEMENTS-----------------
+\section{CERTIFICATIONS \& ACHIEVEMENTS}
+\resumeItemListStart
+\item Solved \textbf{260+} Problems on \href{https://leetcode.com/suryanshverma_1}{\underline{Leetcode}}.
+\item Under Top 5\% in NPTEL Joy of Computing using Python by IIT Madras.
+\item \textbf{2000+} contributions on \href{https://github.com/suryanshvermaa}{\underline{Github}}.
+\resumeItemListEnd
+\vspace{-2mm}
+
+%----------RESPONSIBILITY-----------------
+\section{POSITIONS OF RESPONSIBILITY}
+\resumeSubHeadingListStart
+\resumePOR{Web Team Member}{, Hackslash, NITP}{May 2024 - Present}
+\resumeItemListStart
+\item[$\circ$] Built and optimized the \href{https://github.com/HackSlashNITP/hackslash-official-site.git}{\underline{Hackslash website}} team page and \href{https://github.com/HackSlashNITP/Byteverse-25.git}{\underline{ByteVerse hackathon site}} using Next.js, Tailwind, and Framer Motion—improved load speed by 40\% and reduced bounce rate by 15\%.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
