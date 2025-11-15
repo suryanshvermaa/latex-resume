@@ -31,7 +31,7 @@
 
 % Page layout (tightened)
 \geometry{left=1.15cm, top=0.6cm, right=1.15cm, bottom=0.7cm}
-\setstretch{0.93}
+\setstretch{0.90}
 \setlength{\multicolsep}{0pt} 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -105,7 +105,6 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
-% Custom item labels (avoid nested math mode)
 \renewcommand{\labelitemi}{\raisebox{0.25ex}{\tiny$\bullet$}}
 \renewcommand{\labelitemii}{\raisebox{0.25ex}{\tiny$\circ$}}
 
@@ -115,10 +114,6 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{1mm}}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-1mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1mm}}
-
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 % Personal Information
 \newcommand{\name}{Suryansh Verma}
@@ -132,107 +127,142 @@
 \fontfamily{cmr}\selectfont
 
 %----------HEADING-----------------
+\begin{tabularx}{\linewidth}{@{}l X@{}}
 \parbox{2.25cm}{%
-\includegraphics[width=1.8cm,clip]{logo.png}
+\includegraphics[width=1.8cm]{logo.png}
 }
-\parbox{\dimexpr\linewidth-2.6cm\relax}{
-\begin{tabularx}{\linewidth}{L r}
-  \textbf{\LARGE \name} & +91-\phone \\
-  \course & \href{mailto:\emailb}{\emailb} \\
-  Electrical Engineering & \href{https://www.linkedin.com/in/\linkedin}{linkedin.com/in/\linkedin} \\
-  National Institute of Technology, Patna & \href{https://github.com/\github}{github.com/\github} \\
+&
+\parbox{\linewidth}{
+    \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X r}
+        \textbf{\LARGE \name} & +91-\phone \\
+        \course & \href{mailto:\emailb}{\emailb} \\
+        Electrical Engineering & \href{https://www.linkedin.com/in/\linkedin}{linkedin.com/in/\linkedin} \\
+        National Institute of Technology, Patna & \href{https://github.com/\github}{github.com/\github} \\
+        & \href{https://suryanshverma.vercel.app}{suryanshverma.vercel.app} \\
+    \end{tabularx}
+}
 \end{tabularx}
-}
-\vspace{-2mm}
+
+\vspace{-3mm}
+
+
+
 
 %----------EDUCATION-----------------
 \section{EDUCATION}
-\vspace{0.5mm}
-\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}p{7.5cm}|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\hline
-\textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/ Percentage} & \textbf{Year} \\
-\hline
-B.Tech., EE & National Institute of Technology, Patna & 8.26 & Mar 2027 \\ 
-\hline
-Senior Secondary & Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board & 82.8 & May 2022 \\
-\hline
-Secondary & Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board & 86.17 & May 2020 \\
-\hline
-\end{tabularx}
-\vspace{-2mm}
-
-%----------EXPERIENCE-----------------
-\section{EXPERIENCE}
 \resumeSubHeadingListStart
-\resumePOR{Conference Website}{, Full Stack Developer}{Jan 2025 - Present}
-\resumeItemListStart
-\item[$\circ$] Built and maintain the \href{https://github.com/Shiva-302004/Conference_website.git}{\underline{Conference website}}; (full-stack: frontend + backend); Dockerized and deployed on Vercel and Render ensuring reliable, scalable production hosting and rapid updates.
-\resumeItemListEnd
-\resumePOR{Opensource contribution}{, Backend Developer}{Jan 2025 - Present}
-\resumeItemListStart
-\item[$\circ$] Developed and published a popular CLI tool \href{https://github.com/suryanshvermaa/create-express-mongo-prod}{\underline{create-express-mongo-prod}} to bootstrap production-ready Express + MongoDB projects with integrated linting, formatting, and Docker support, achieving over 300 downloads in its first month.
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-\vspace{-5mm}
 
-%----------PROJECTS-----------------
-\section{PROJECTS}
-\resumeSubHeadingListStart
-\resumeProject
-{SCS Cloud: Cloud Native Media Processing, Static Delivery, Container Service \& Object Storage}
-{Tech Stack: Go, TypeScript, Node.js, React, Kubernetes, Docker, gRPC, PostgreSQL, MongoDB, Redis, AWS S3, Cashfree}
-{Oct 2025}
-{\href{https://github.com/suryanshvermaa/scsCloud}{\faGithub}}
-\resumeItemListStart
-\item[$\circ$] Architected cloud-native microservices platform with containerized services on Kubernetes, delivering video transcoding, static hosting, object storage, and container deployment
-\item[$\circ$] Developed gRPC-based container deployment service with automatic Kubernetes provisioning, enabling users to deploy and manage applications with multi-tenant isolation
-\item[$\circ$] Engineered automated HLS video transcoding pipeline with queue-based processing, producing multi-resolution streams (1080p/720p/480p/360p) on S3-compatible storage
-\item[$\circ$] Implemented full-stack static website hosting with automated build pipeline, subdomain routing, cache-optimized delivery, and integrated payment processing
-\item[$\circ$] Built responsive React frontend with dark mode, payment flows, object storage browser, video transcoding interface, and AI-powered chatbot
-\resumeItemListEnd
+\resumeSubheading
+{B.Tech., Electrical Engineering}{CGPA: 8.26}
+{National Institute of Technology, Patna}{Mar 2027}
 
-\resumeProject
-{Scalable Todo Management System with C++ Backend \& CI/CD Pipeline}
-{Tech Stack: C++20, Drogon, CMake, PostgreSQL, Docker, Kubernetes, Jenkins, ArgoCD}
-{July 2025}
-{\href{https://github.com/suryanshvermaa/my-fastest-drogon-app-cpp}{\faGithub}}
-\resumeItemListStart
-\item[$\circ$] Developed a high-performance RESTful API using Drogon C++ with JWT authentication, bcrypt hashing, and PostgreSQL ORM integration.
-\item[$\circ$] Built custom middleware for authentication, CORS, and async error handling to enhance backend reliability and scalability.
-\item[$\circ$] Containerized backend and frontend using Docker and configured Kubernetes manifests with Ingress and persistent storage for production deployment.
-\item[$\circ$] Implemented a CI/CD pipeline via Jenkins integrating GitOps with ArgoCD, automating build, push, and deployment stages.
-\item[$\circ$] Achieved 99.9\% uptime by optimizing Kubernetes deployment for horizontal scaling, secret management, and health monitoring.
-\resumeItemListEnd
+\resumeSubheading
+{Senior Secondary (12th)}{82.8\%}
+{Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board}{May 2022}
+
+\resumeSubheading
+{Secondary (10th)}{86.17\%}
+{Pt. Deen Dayal Upadhyay Saraswati Vidya Mandir, UP Board}{May 2020}
+
 \resumeSubHeadingListEnd
 \vspace{-6mm}
 
-%----------SKILLS-----------------
+
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumePOR{Conference Website}{, Full Stack Developer}{Jan 2025 -- Present}
+\resumeItemListStart
+\item[$\circ$] Built a full-stack \href{https://github.com/Shiva-302004/Conference_website.git}{\textbf{\underline{conference platform}}} using \textbf{React, Node.js, Express} with modular and maintainable components.
+\item[$\circ$] Containerized and deployed using \textbf{Docker} on Vercel/Render, improving reliability and release workflow.
+\resumeItemListEnd
+
+\resumePOR{Open Source Contribution}{, Backend Developer}{Jan 2025 -- Present}
+\resumeItemListStart
+\item[$\circ$] Developed and maintained \href{https://github.com/suryanshvermaa/create-express-mongo-prod.git}{\textbf{\underline{create-express-mongo-prod}}}, a CLI that scaffolds Express apps (TS/JS) with MongoDB/Mongoose or PostgreSQL/Prisma, Docker, ESLint, Prettier, and Husky.
+\item[$\circ$] Added optional integrations (\textbf{Redis, Kafka, Socket.IO, BullMQ, AWS S3}) and automated setup via interactive prompts to reduce developer onboarding time.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-7mm}
+
+\section{PROJECTS}
+\resumeSubHeadingListStart
+
+\resumeProject
+{SCS Cloud: Distributed Media Processing \& Container Service}
+{Tech Stack: Go, TypeScript, Node.js, React, Kubernetes, Docker, gRPC, PostgreSQL, MongoDB, Redis, AWS S3}
+{Oct 2025}
+{\href{https://github.com/suryanshvermaa/scsCloud}{\faGithub}}
+\vspace{-1mm}
+\resumeItemListStart
+\item[$\circ$] Architected a \textbf{distributed microservices platform} on Kubernetes enabling scalable media processing, multi-tenant container execution, and object storage.
+\item[$\circ$] Built a \textbf{gRPC-based orchestration service} that automated pod provisioning and secure scheduling, improving cluster utilization and reliability.
+\item[$\circ$] Designed and optimized a parallel \textbf{HLS transcoding pipeline}, achieving \textbf{40–50\% faster} encoding through queue workers and concurrency tuning.
+\item[$\circ$] Implemented subdomain routing and a cache-optimized CDN layer, reducing content delivery latency by \textbf{40\%}.
+\item[$\circ$] Developed a full React dashboard with real-time processing views, object storage explorer, billing workflows, and integrated AI-powered assistance.
+\resumeItemListEnd
+% \vspace{-2mm}
+
+\resumeProject
+{Scalable Todo Management System with C++ Backend \& CI/CD}
+{Tech Stack: C++20, Drogon, CMake, PostgreSQL, Docker, Kubernetes, Jenkins, ArgoCD}
+{Jul 2025}
+{\href{https://github.com/suryanshvermaa/my-fastest-drogon-app-cpp}{\faGithub}}
+\vspace{-1mm}
+\resumeItemListStart
+\item[$\circ$] Built a high-performance \textbf{REST API} in C++20 using Drogon with \textbf{JWT authentication}, bcrypt hashing, and PostgreSQL ORM, supporting thousands of concurrent requests.
+\item[$\circ$] Implemented custom middleware for \textbf{auth, rate limiting, CORS, and async error handling}, improving fault tolerance and request throughput.
+\item[$\circ$] Deployed on Kubernetes with Ingress, Secrets, PVs, HPA, and health checks to achieve \textbf{fault-tolerant scaling} and consistent uptime.
+\item[$\circ$] Built a production-grade CI/CD pipeline using \textbf{Jenkins + ArgoCD}, automating tests, builds, scans, and progressive delivery.
+\item[$\circ$] Achieved \textbf{99.9\% system availability} by tuning resource configurations, enabling liveness/readiness probes, and optimizing database performance.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-8mm}
+
+
+
 \section{SKILLS}
 \resumeHeadingSkillStart
-\resumeSubItem{Programming Languages}{: C++, C, Java, Python, JavaScript, Typescript, Go}
-\resumeSubItem{Frameworks}{: React.js, React Native, Next.js, Express.js, Gin, Drogon, Node.js, LangChain}
-\resumeSubItem{Databases}{: MongoDB, Redis, PostgreSQL}
-\resumeSubItem{DevOps Tools}{: AWS, Docker, Kubernetes, Jenkins, Argo CD, Git}
-\resumeSubItem{Concepts}{: Computer Networks, DBMS, OS, OOPS, Bash, Kafka}
+\resumeSubItem{Programming Languages}{: Java, Python, C++, Go, JavaScript, TypeScript}
+\resumeSubItem{Backend \& Frameworks}{: Node.js, Express.js, Drogon, Gin, React.js, Next.js}
+\resumeSubItem{Distributed Systems \& Cloud}{: Kubernetes, Docker, gRPC, AWS (EC2, S3), CI/CD, Linux}
+\resumeSubItem{Databases}{: PostgreSQL, MongoDB, Redis}
+\resumeSubItem{CS Fundamentals}{: Data Structures \& Algorithms, OOP, OS, CN, DBMS, System Design Basics}
 \resumeHeadingSkillEnd
-\vspace{-4mm}
+
+\vspace{-3mm}
+
+
 
 %----------ACHIEVEMENTS-----------------
 \section{CERTIFICATIONS \& ACHIEVEMENTS}
 \resumeItemListStart
-\item Solved \textbf{260+} Problems on \href{https://leetcode.com/suryanshverma_1}{\underline{Leetcode}}.
-\item Under Top 5\% in NPTEL Joy of Computing using Python by IIT Madras.
-\item \textbf{2000+} contributions on \href{https://github.com/suryanshvermaa}{\underline{Github}}.
+\item Solved \textbf{250+ DSA problems} on \href{https://leetcode.com/u/suryanshverma_1/}{\textbf{\underline{LeetCode}}} focusing on algorithms, data structures, and complexity optimization.
+\item Ranked in the \textbf{Top 5\%} in NPTEL “Joy of Computing with Python” by IIT Madras.
+\item \textbf{2000+ GitHub contributions}, showcasing consistent development, debugging, and open-source collaboration.
 \resumeItemListEnd
-\vspace{-2mm}
+\vspace{-3mm}
 
-%----------RESPONSIBILITY-----------------
+
+
 \section{POSITIONS OF RESPONSIBILITY}
 \resumeSubHeadingListStart
-\resumePOR{Web Team Member}{, Hackslash, NITP}{May 2024 - Present}
+
+\resumePOR{Web Team Member}{, Hackslash, NIT Patna}{May 2024 -- Present}
 \resumeItemListStart
-\item[$\circ$] Built and optimized the \href{https://github.com/HackSlashNITP/hackslash-official-site.git}{\underline{Hackslash website}} team page and \href{https://github.com/HackSlashNITP/Byteverse-25.git}{\underline{ByteVerse hackathon site}} using Next.js, Tailwind, and Framer Motion—improved load speed by 40\% and reduced bounce rate by 15\%.
+\item[$\circ$] Built the official \textbf{Hackslash} and \textbf{ByteVerse (NITP hackathon)} websites using Next.js, Tailwind, and Framer Motion.
+\item[$\circ$] Improved site performance, achieving \textbf{40\% faster} load times and \textbf{15\% lower} bounce rates.
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
+
+
 
 \end{document}
